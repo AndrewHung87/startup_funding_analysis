@@ -22,26 +22,47 @@ An end-to-end data analysis portfolio project covering ETL, data cleaning, explo
 
 | Tool | Purpose |
 |---|---|
-| Python / pandas | ETL, data cleaning, EDA |
-| Google Colab | Development environment |
-| Tableau Public | Interactive dashboard |
-| GitHub | Version control & hosting |
+| Python / pandas | ETL, data cleaning, preprocessing, exploratory data analysis |
+| Google Colab | Notebook-based analysis environment |
+| BigQuery | Cloud SQL analysis layer |
+| SQL | Funding, geography, industry, and hiring-signal analysis |
+| Tableau Public | Interactive dashboard and visual storytelling |
+| GitHub | Version control and portfolio documentation |
 
 ---
 
 ## Project Structure
 
-```
+```text
 startup_funding_analysis/
-├── startup_funding_analysis.ipynb   # Main notebook (ETL + EDA)
-├── Startup_Data__Startup.csv        # Raw dataset
-├── startup_funding_cleaned.csv      # Cleaned dataset
-└── README.md
+├── README.md
+├── data/
+│   ├── raw/
+│   │   └── Startup_Data__Startup.csv
+│   └── processed/
+│       └── startup_funding_cleaned.csv
+├── notebooks/
+│   └── startup_funding_analysis.ipynb
+├── sql/
+│   └── startup_analysis_queries.sql
+├── outputs/
+│   └── sql_results/
+│       ├── funding_by_industry.csv
+│       ├── funding_by_region.csv
+│       ├── funding_by_year.csv
+│       ├── active_hiring_rate_by_industry.csv
+│       ├── high_trend_low_funding_companies.csv
+│       └── industry_funding_rank.csv
+├── docs/
+│   └── bigquery_schema.md
+└── images/
+    ├── bigquery_table_schema.png
+    └── bigquery_query_example.png
 ```
 
 ---
 
-## Key Findings
+## Key Findings from Python and Tableau Analysis
 
 ### Industry Funding
 - **AI & Data dominates** with 676 startups and $17.2B total funding, but median deal size is only $4.7M — a few mega-deals drive the average
@@ -79,9 +100,75 @@ startup_funding_analysis/
 
 ---
 
+## BigQuery SQL Analysis Layer
+
+To strengthen this project beyond Python-based cleaning and Tableau visualization, I loaded the cleaned startup funding dataset into BigQuery and created a SQL analysis layer using BigQuery Standard SQL.
+
+The SQL analysis answers business questions related to startup funding concentration, regional startup activity, year-over-year funding trends, active hiring signals, and company-level opportunity prioritization.
+
+**SQL Engine:** BigQuery Standard SQL  
+**Project:** `startups-sql-data-portfolio`  
+**Dataset:** `startup_funding`  
+**Table:** `startup_data`  
+**Rows Analyzed:** 1,576  
+**SQL File:** `sql/startup_analysis_queries.sql`  
+**Query Outputs:** `outputs/sql_results/`  
+**Schema:** `docs/bigquery_schema.md`
+
+### Business Questions Answered
+
+1. Which industries receive the most total and average funding?
+2. Which regions have the highest startup concentration and funding activity?
+3. How did funding activity change between 2024 and 2025?
+4. Which industries show the highest active hiring rate?
+5. Which lower-funded companies show strong recent trend signals?
+6. Which companies rank highest in funding within each industry?
+
+### SQL Outputs
+
+| Query | Output File | Purpose |
+|---|---|---|
+| Funding by industry | `funding_by_industry.csv` | Identify industries with the highest funding concentration |
+| Funding by region | `funding_by_region.csv` | Compare startup density and funding by location |
+| Funding by year | `funding_by_year.csv` | Compare funding activity between 2024 and 2025 |
+| Active hiring rate by industry | `active_hiring_rate_by_industry.csv` | Identify industries with stronger hiring signals |
+| High trend / low funding companies | `high_trend_low_funding_companies.csv` | Find potentially under-the-radar companies |
+| Industry funding rank | `industry_funding_rank.csv` | Rank top-funded companies within each industry using a window function |
+
+### BigQuery SQL Findings
+
+- `AI & Data` had the largest company count and total funding in the BigQuery analysis layer, with 599 companies and approximately $17.2B in total funding.
+- `California` had the highest startup concentration by state, with 583 companies and approximately $25.0B in total funding.
+- Within the analyzed dataset, total funding increased from approximately $17.2B in 2024 to $30.8B in 2025, a 78.8% increase.
+- Average deal size increased from approximately $25.1M in 2024 to $34.6M in 2025.
+- `CleanTech & Energy` showed the highest active hiring rate at 63.64%, though the sample size was smaller with 33 companies.
+
+### BigQuery Evidence
+
+Screenshots are included in the `images/` folder:
+
+- `images/bigquery_table_schema.png`
+- `images/bigquery_query_example.png`
+
+![BigQuery Table Schema](images/bigquery_table_schema.png)
+
+![BigQuery Query Example](images/bigquery_query_example.png)
+
+---
+
 ## Dashboard Features
 
 1. **Industry Funding Overview** — Total funding by industry (log scale bar chart)
 2. **Geographic Map** — Startup concentration and funding by US state (filled map)
 3. **2024 vs 2025 Comparison** — Median deal size growth by industry (side-by-side bar chart)
 4. **Funding Distribution** — Spread and outliers by industry (box plot)
+
+---
+
+## Limitations
+
+- This project uses a cleaned Crunchbase-style dataset and should not be treated as a complete representation of the startup market.
+- Funding and hiring-related findings are limited to the records available in the analyzed 2024-2025 dataset.
+- `Active_Hiring` and trend scores are treated as directional signals, not confirmed hiring outcomes.
+- Tableau findings and BigQuery SQL findings may use different aggregation levels, such as broad region versus state-level grouping.
+- The project is designed for exploratory business analysis and portfolio demonstration, not production forecasting.
