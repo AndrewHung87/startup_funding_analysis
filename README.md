@@ -147,6 +147,9 @@ The SQL analysis answers business questions related to startup funding concentra
 
 Screenshots are included in the `images/` folder:
 
+- `images/bigquery_table_schema.png`
+- `images/bigquery_query_example.png`
+
 ![BigQuery Table Schema](images/bigquery_table_schema.png)
 
 ![BigQuery Query Example](images/bigquery_query_example.png)
