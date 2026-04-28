@@ -62,6 +62,24 @@ startup_funding_analysis/
 
 ---
 
+## SQL Analysis (BigQuery)
+
+Six business queries were written in BigQuery Standard SQL to support 
+dashboard development and EDA findings:
+
+| Query | Business Question |
+|---|---|
+| Funding by Industry | Which industries attract the most capital? |
+| Funding by Region | Where are high-value startups concentrated? |
+| YoY Trend | How did deal size and volume shift from 2024 to 2025? |
+| Active Hiring Rate | Which industries show strongest hiring signals? |
+| High-Trend / Low-Funding | Which smaller startups have rising momentum? |
+| Industry Funding Rank | Top 5 funded companies per industry (window function) |
+
+→ [View SQL queries](sql/startup_analysis_queries.sql)
+
+---
+
 ## Key Findings from Python and Tableau Analysis
 
 ### Industry Funding
