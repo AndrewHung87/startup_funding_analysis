@@ -1,0 +1,16 @@
+company_name,Industry_Category,headquarters_region,Total_Funding_Amount,Trend_Score_30_Days,Active_Hiring
+Glacier Road,Media & Marketing,California,1000.0,9.9,false
+Spotlight Realty,AI & Data,New York,500000.0,9.9,false
+Albacore,Industrial & Other,Pennsylvania,500000.0,9.9,false
+Solva,Fintech,California,500000.0,9.9,false
+Luminal,AI & Data,California,500000.0,9.9,false
+Driven,AI & Data,Wisconsin,1500000.0,9.9,true
+Demand AI,AI & Data,Colorado,2500000.0,9.9,true
+Eve Security,AI & Data,Texas,3000000.0,9.9,false
+DACLab,Other/Unknown,California,3000000.0,9.9,false
+SolidCore.ai,Other/Unknown,California,4000000.0,9.9,true
+Senpi,Fintech,California,4000000.0,9.9,true
+Veylan,AI & Data,New York,5506650.0,9.9,false
+Symmetri,AI & Data,California,6000000.0,9.9,false
+Assured Health,Healthcare & Biotech,Texas,6000000.0,9.9,true
+Geniez AI,Enterprise Software,Delaware,6000000.0,9.9,false

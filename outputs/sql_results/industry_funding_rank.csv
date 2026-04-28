@@ -1,0 +1,47 @@
+company_name,Industry_Category,Total_Funding_Amount,funding_rank
+Safe Superintelligence,AI & Data,3000000000.0,1
+Thinking Machines Lab,AI & Data,2009975164.0,2
+Poolside,AI & Data,626000000.0,3
+Physical Intelligence,AI & Data,470000000.0,4
+Lila Sciences,AI & Data,435000000.0,5
+Skild AI,AI & Data,435000000.0,5
+TransGrid Energy,CleanTech & Energy,975000000.0,1
+Pacific Fusion,CleanTech & Energy,900000000.0,2
+Dispatch Energy,CleanTech & Energy,369000000.0,3
+Also,CleanTech & Energy,305000000.0,4
+Base Power,CleanTech & Energy,268000000.0,5
+Duckfund,E-Commerce & Retail,100000000.0,1
+David,E-Commerce & Retail,85000000.0,2
+Lucky Energy,E-Commerce & Retail,37950000.0,3
+Daisy,E-Commerce & Retail,33000000.0,4
+Paraform,E-Commerce & Retail,25000000.0,5
+TECFusions,Enterprise Software,300000000.0,1
+Cloverleaf Infrastructure,Enterprise Software,300000000.0,1
+Eon,Enterprise Software,197000000.0,3
+Mach Industries,Enterprise Software,184700000.0,4
+Atlas Data Storage,Enterprise Software,155000000.0,5
+Millrose properties,Fintech,2000000000.0,1
+World Liberty Financial,Fintech,950000000.0,2
+Pump.fun,Fintech,600000000.0,3
+Fourcore Capital,Fintech,500000000.0,4
+BlockDAG,Fintech,410000000.0,5
+Xaira Therapeutics,Healthcare & Biotech,1000000000.0,1
+Mirador Therapeutics,Healthcare & Biotech,480000000.0,2
+Oruka Therapeutics,Healthcare & Biotech,455000000.0,3
+Crescent Biopharma,Healthcare & Biotech,400000000.0,4
+Kailera Therapeutics,Healthcare & Biotech,400000000.0,4
+Hybar,Industrial & Other,700000000.0,1
+Highland Materials,Industrial & Other,255600000.0,2
+Amca,Industrial & Other,76500000.0,3
+Vulcan Elements,Industrial & Other,70201998.0,4
+The Lumber Manufactory,Industrial & Other,52099947.0,5
+gamma,Media & Marketing,1100000000.0,1
+ModRetro,Media & Marketing,19099993.0,2
+PH»≤ND,Media & Marketing,14926546.0,3
+Fixated,Media & Marketing,12800000.0,4
+Overworld,Media & Marketing,12500000.0,5
+Billor,Other/Unknown,330000000.0,1
+Accelerated Mobile Power,Other/Unknown,300000000.0,2
+Starlab Space,Other/Unknown,232500000.0,3
+Eyconis,Other/Unknown,60251247.0,4
+Gensmo,Other/Unknown,60000000.0,5
